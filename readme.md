@@ -17,3 +17,15 @@ It includes:
 - CORS-enabled API for browser access.
 - Clean separation of backend and frontend code.
 - Easily extendable to MongoDB or any database.
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint         | Description                               |
+| ------ | ---------------- | ----------------------------------------- |
+| GET    | `/companies`     | Get all companies (with optional filters) |
+| GET    | `/companies/:id` | Get a single company by ID                |
+| POST   | `/companies`     | Add a new company                         |
+| PUT    | `/companies/:id` | Update company details                    |
+| DELETE | `/companies/:id` | Delete a company                          |
