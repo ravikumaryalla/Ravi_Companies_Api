@@ -1,0 +1,119 @@
+.container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.tableContainer {
+  max-height: 600px;
+}
+
+.headerCell {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  padding: 1rem !important;
+  border: none !important;
+}
+
+.tableRow {
+  transition: all 0.2s ease !important;
+}
+
+.tableRow:hover {
+  background: rgba(99, 102, 241, 0.05) !important;
+  transform: translateY(-1px);
+}
+
+.companyCell {
+  padding: 1rem !important;
+}
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.companyName {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.companySubtext {
+  color: #64748b !important;
+}
+
+.industryCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.industryIcon {
+  color: #6366f1 !important;
+  font-size: 1.2rem !important;
+}
+
+.location {
+  color: #475569 !important;
+}
+
+.metricCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metricIcon {
+  color: #64748b !important;
+  font-size: 1rem !important;
+}
+
+.revenue {
+  color: #059669 !important;
+  font-weight: 500 !important;
+}
+
+.statusChip {
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+}
+
+@media (max-width: 768px) {
+  .tableContainer {
+    max-height: 500px;
+  }
+
+  .headerCell {
+    padding: 0.75rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .companyCell {
+    padding: 0.75rem 0.5rem !important;
+  }
+
+  .companyInfo {
+    gap: 0.5rem;
+  }
+
+  .avatar {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.875rem !important;
+  }
+}

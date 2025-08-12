@@ -1,0 +1,77 @@
+.container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+.resultChip {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.searchField {
+  grid-column: 1;
+}
+
+.searchIcon {
+  color: #64748b !important;
+  margin-right: 0.5rem;
+}
+
+.select {
+  position: relative;
+}
+
+.selectIcon {
+  color: #64748b !important;
+  margin-right: 0.5rem;
+  margin-left: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .filters {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .searchField {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

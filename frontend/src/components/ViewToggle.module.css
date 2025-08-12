@@ -1,0 +1,51 @@
+.container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.toggleGroup {
+  background: transparent !important;
+  border: none !important;
+}
+
+.toggleButton {
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 1.5rem !important;
+  margin: 0 0.25rem !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.toggleButton:hover {
+  background: rgba(99, 102, 241, 0.1) !important;
+  color: #6366f1 !important;
+}
+
+.toggleButton.Mui-selected {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+.icon {
+  margin-right: 0.5rem !important;
+  font-size: 1.2rem !important;
+}
+
+@media (max-width: 768px) {
+  .toggleButton {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .icon {
+    margin-right: 0.25rem !important;
+    font-size: 1rem !important;
+  }
+}

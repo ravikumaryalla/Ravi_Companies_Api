@@ -1,0 +1,59 @@
+.container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  margin-top: 2rem;
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pageInfo {
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .MuiPaginationItem-root {
+  border-radius: 12px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.pagination .MuiPaginationItem-root:hover {
+  background: rgba(99, 102, 241, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+.pagination .MuiPaginationItem-root.Mui-selected {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .paginationWrapper {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .pagination .MuiPaginationItem-root {
+    margin: 0 0.125rem !important;
+  }
+}
