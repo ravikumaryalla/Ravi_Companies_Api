@@ -37,16 +37,7 @@ const CompanyTable = ({ companies }) => {
   };
 
   const getStatusColor = (status) => {
-    switch (status?.toLowerCase()) {
-      case "active":
-        return "success";
-      case "inactive":
-        return "error";
-      case "pending":
-        return "warning";
-      default:
-        return "default";
-    }
+    return status ? "success" : "error";
   };
 
   const getIndustryIcon = (industry) => {
@@ -65,7 +56,7 @@ const CompanyTable = ({ companies }) => {
               <TableCell className={styles.headerCell}>Employees</TableCell>
               <TableCell className={styles.headerCell}>Revenue</TableCell>
               <TableCell className={styles.headerCell}>Founded</TableCell>
-              <TableCell className={styles.headerCell}>Status</TableCell>
+              <TableCell className={styles.headerCell}>Is Hiring</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -109,7 +100,7 @@ const CompanyTable = ({ companies }) => {
                   <Box className={styles.metricCell}>
                     <People className={styles.metricIcon} />
                     <Typography variant="body2">
-                      {formatNumber(company.employees)}
+                      {formatNumber(company.employeeCount)}
                     </Typography>
                   </Box>
                 </TableCell>
@@ -125,14 +116,14 @@ const CompanyTable = ({ companies }) => {
                   <Box className={styles.metricCell}>
                     <CalendarToday className={styles.metricIcon} />
                     <Typography variant="body2">
-                      {company.founded || "N/A"}
+                      {company.foundedYear || "N/A"}
                     </Typography>
                   </Box>
                 </TableCell>
                 <TableCell>
                   <Chip
-                    label={company.status || "Unknown"}
-                    color={getStatusColor(company.status)}
+                    label={company.isHiring ? "Yes" : "No"}
+                    color={getStatusColor(company.isHiring)}
                     size="small"
                     className={styles.statusChip}
                   />

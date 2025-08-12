@@ -1,35 +1,51 @@
-import { Grid, Card, CardContent, Typography, Chip, Avatar, Box, Divider } from "@mui/material"
-import { Business, People, AttachMoney, CalendarToday, LocationOn, Language } from "@mui/icons-material"
-import styles from "./CompanyCards.module.css"
+import {
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  Chip,
+  Avatar,
+  Box,
+  Divider,
+} from "@mui/material";
+import {
+  Business,
+  People,
+  AttachMoney,
+  CalendarToday,
+  LocationOn,
+  Language,
+} from "@mui/icons-material";
+import styles from "./CompanyCards.module.css";
 
 const CompanyCards = ({ companies }) => {
   const formatCurrency = (amount) => {
-    if (!amount) return "N/A"
+    if (!amount) return "N/A";
     return new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
-    }).format(amount)
-  }
+    }).format(amount);
+  };
 
   const formatNumber = (num) => {
-    if (!num) return "N/A"
-    return new Intl.NumberFormat("en-US").format(num)
-  }
+    if (!num) return "N/A";
+    return new Intl.NumberFormat("en-US").format(num);
+  };
 
   const getStatusColor = (status) => {
     switch (status?.toLowerCase()) {
       case "active":
-        return "success"
+        return "success";
       case "inactive":
-        return "error"
+        return "error";
       case "pending":
-        return "warning"
+        return "warning";
       default:
-        return "default"
+        return "default";
     }
-  }
+  };
 
   return (
     <Grid container spacing={3}>
@@ -38,7 +54,9 @@ const CompanyCards = ({ companies }) => {
           <Card className={styles.card}>
             <CardContent className={styles.cardContent}>
               <Box className={styles.header}>
-                <Avatar className={styles.avatar}>{company.name?.charAt(0) || "C"}</Avatar>
+                <Avatar className={styles.avatar}>
+                  {company.name?.charAt(0) || "C"}
+                </Avatar>
                 <Box className={styles.headerInfo}>
                   <Typography variant="h6" className={styles.companyName}>
                     {company.name || "Unknown Company"}
@@ -72,7 +90,7 @@ const CompanyCards = ({ companies }) => {
                 <Box className={styles.detailItem}>
                   <People className={styles.icon} />
                   <Typography variant="body2" className={styles.detailText}>
-                    {formatNumber(company.employees)} employees
+                    {formatNumber(company.employeeCount)} employees
                   </Typography>
                 </Box>
 
@@ -86,7 +104,7 @@ const CompanyCards = ({ companies }) => {
                 <Box className={styles.detailItem}>
                   <CalendarToday className={styles.icon} />
                   <Typography variant="body2" className={styles.detailText}>
-                    Founded {company.founded || "N/A"}
+                    Founded {company.foundedYear || "N/A"}
                   </Typography>
                 </Box>
 
@@ -104,7 +122,7 @@ const CompanyCards = ({ companies }) => {
         </Grid>
       ))}
     </Grid>
-  )
-}
+  );
+};
 
-export default CompanyCards
+export default CompanyCards;

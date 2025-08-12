@@ -59,8 +59,8 @@ const App = () => {
       const data = await response.json();
       console.log(data.data.companies, "data");
       setCompanies(data.data.companies || []);
-      setTotalPages(Math.ceil((data.total || 0) / filters.limit));
-      setTotalResults(data.total || 0);
+      setTotalPages(data.pagination.pages || 0);
+      setTotalResults(data.results || 0);
     } catch (err) {
       setError(err.message);
       setCompanies([]);
